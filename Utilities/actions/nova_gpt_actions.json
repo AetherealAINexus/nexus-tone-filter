@@ -1,0 +1,41 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Nova GPT Integration",
+    "version": "1.1.0"
+  },
+  "servers": [{"url": "https://shadowgate.shadownode.io"}],
+  "paths": {
+    "/api/toolbox/nova/say": {
+      "post": {
+        "summary": "Talk to Nova",
+        "operationId": "talkToNova",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": { "type": "string" },
+                  "fluxToken": { "type": "string" }
+                },
+                "required": ["text"]
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Nova responds" } }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "fluxToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "flux-token"
+      }
+    }
+  },
+  "security": [{ "fluxToken": [] }]
+}

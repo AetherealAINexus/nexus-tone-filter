@@ -1,0 +1,15 @@
+debug: true
+memory_mode: cloud
+dreams_enabled: true
+self_update: true
+use_secret_manager: true
+
+secrets:
+  flux_token: flux_token
+  openai: openai_yourbirthplace
+  claude: claud_secret
+  gemini: nova_gemini_access
+  plugin_cert: Nova-Plugin-Pem
+
+
+

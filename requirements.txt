@@ -1,0 +1,28 @@
+# 🔧 Co# 🔧 Core Web Framework
+Flask==2.2.5
+
+# 🌐 HTTP Requests
+requests==2.31.0
+
+# 🔐 Secret Management (GCP)
+google-cloud-secret-manager==2.16.3
+
+# 🧠 Firestore (Nova’s default memory vault)
+google-cloud-firestore==2.11.1
+
+# 🧪 YAML Support
+PyYAML==6.0.1
+
+# 🌱 Env Loader
+python-dotenv==1.0.1
+
+# 🧠 GPT Agent Layer
+openai==1.12.0
+
+# ☁️ GCP API Manipulation (Infra)
+google-api-python-client==2.122.0
+
+# 🚄 Async Routing Framework
+fastapi==0.110.0
+uvicorn==0.29.0
+

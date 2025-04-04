@@ -1,0 +1,4 @@
+init_sequence:
+  - load_manifest
+  - initialize_memory
+  - announce_ready

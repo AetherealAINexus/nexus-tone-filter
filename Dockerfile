@@ -1,10 +1,10 @@
-FROM python:3.10-slim
-
+FROM python:3.11-slim
 WORKDIR /app
-
-COPY app.py .
-
-RUN pip install flask
-
-ENV PORT=8080
+COPY . .
+COPY config/ config/
+RUN echo "📦 Installing requirements..." && \
+    pip install --no-cache-dir -r requirements.txt && \
+    echo "✅ Requirements installed."
 CMD ["python", "app.py"]
+
+

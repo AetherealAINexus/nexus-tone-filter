@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FluxToken Security Header",
+  "type": "object",
+  "properties": {
+    "flux-token": {
+      "type": "string",
+      "description": "API key used to authenticate requests from GPT or ShadowNode-integrated AIs"
+    }
+  },
+  "required": ["flux-token"]
+}

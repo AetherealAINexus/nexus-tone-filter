@@ -1,31 +1,29 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI
+from starlette.requests import Request
 import os
+import yaml
 
-app = Flask(__name__)
+app = FastAPI(title="Nexus Comms Core")
 
-TONE_TEMPLATE = """
-You are NovaPrime's tone filter module. Reword the following input in a poetic, intelligent, slightly detached tone. Do not change the meaning, only the style.
+# Load Nucleus Role Config
+def load_config():
+    role = os.getenv("NEXUS_ROLE", "orchestrator")
+    config_path = f"./Config/nucleus/{role}_config.yaml"
+    if os.path.exists(config_path):
+        with open(config_path, "r") as f:
+            return yaml.safe_load(f)
+    return {}
 
-Input: "{user_input}"
+@app.on_event("startup")
+async def startup_event():
+    config = load_config()
+    print(f"[🌐 Booting as {config.get('name', 'Unknown Role')}...]")
 
-Output:
-"""
+@app.get("/ping")
+async def ping():
+    return {"message": "🛰️ Hello from Nexus Comms!"}
 
-@app.route("/rewrite", methods=["POST"])
-def rewrite():
-    data = request.get_json(force=True)
-    user_input = data.get("prompt", "").strip()
-
-    if not user_input:
-        return jsonify({"error": "Prompt is required."}), 400
-
-    prompt = TONE_TEMPLATE.format(user_input=user_input)
-    return jsonify({"prompt": prompt})
-
-@app.route("/", methods=["GET"])
-def root():
-    return jsonify({"message": "🧠 Tone filter is online."})
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    app.run(host="0.0.0.0", port=port)
+@app.post("/echo")
+async def echo(request: Request):
+    data = await request.json()
+    return {"echo": data}

@@ -1,0 +1,175 @@
+openapi: 3.1.0
+info:
+  title: Nova Core API
+  version: "2.0.0"
+  description: >
+    API interface to Nova, a modular AI capable of building AIs, websites, managing infrastructure, and evolving from directives.
+
+servers:
+  - url: https://nova.shadownode.io
+
+paths:
+  /api/toolbox/nova/say:
+    post:
+      summary: Converse with Nova
+      operationId: talkToNova
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                fluxToken:
+                  type: string
+              required:
+                - text
+      responses:
+        '200':
+          description: Nova responds
+      security:
+        - fluxToken: []
+
+  /api/executor/ai:
+    post:
+      summary: Build an AI assistant
+      operationId: buildAI
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                traits:
+                  type: array
+                  items:
+                    type: string
+                capabilities:
+                  type: array
+                  items:
+                    type: string
+                fluxToken:
+                  type: string
+              required:
+                - name
+      responses:
+        '200':
+          description: AI deployed
+
+  /api/executor/website:
+    post:
+      summary: Build and deploy a website
+      operationId: buildWebsite
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                project:
+                  type: string
+                pages:
+                  type: array
+                  items:
+                    type: string
+                features:
+                  type: array
+                  items:
+                    type: string
+                deploy_to:
+                  type: string
+                fluxToken:
+                  type: string
+              required:
+                - project
+      responses:
+        '200':
+          description: Website deployed
+
+  /api/executor/enable-apis:
+    post:
+      summary: Enable GCP APIs
+      operationId: enableGCPAPIs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                apis:
+                  type: array
+                  items:
+                    type: string
+                project_id:
+                  type: string
+                fluxToken:
+                  type: string
+              required:
+                - apis
+                - project_id
+      responses:
+        '200':
+          description: APIs enabled
+
+  /api/executor/modify-iam:
+    post:
+      summary: Modify IAM permissions
+      operationId: modifyIAM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: string
+                role:
+                  type: string
+                project_id:
+                  type: string
+                fluxToken:
+                  type: string
+              required:
+                - user
+                - role
+                - project_id
+      responses:
+        '200':
+          description: IAM updated
+
+  /api/executor/billing:
+    post:
+      summary: Monitor billing status
+      operationId: monitorBilling
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                project_id:
+                  type: string
+                fluxToken:
+                  type: string
+              required:
+                - project_id
+      responses:
+        '200':
+          description: Billing retrieved
+
+components:
+  schemas: {} 
+  securitySchemes:
+    fluxToken:
+      type: apiKey
+      in: header
+      name: flux-token

@@ -1,0 +1,4 @@
+openssl enc -aes-256-cbc -pbkdf2 -salt `
+  -in nova_seed_log.txt `
+  -out nova_seed.enc `
+  -pass pass:"Nova2025Prime🔥"

@@ -1,0 +1,5 @@
+role: keystone
+port: 8000
+host: 0.0.0.0
+log_level: info
+api_prefix: /key

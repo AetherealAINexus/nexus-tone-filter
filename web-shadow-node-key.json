@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "silent-revolution-ai-nexus",
+  "private_key_id": "f97eda868f542cea3674773d1eb0f9678e67a43d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCfrjMx8BfLtF2n\novDZ+GhjoEC1CW0L2Gn+4dAtCOFZwMH3munMJSyUSoonQ8P+ZjUJ03SKzvn5rYBj\noMo5v/T0JKgk5HSg2pH8aF+vWpHht2LKTpEJwhnYc9R5CvacJvm9Aw/UYFAXHmQq\ngfWQMw9jKgwQ5IGNlrYMCj+aW3sRQik68lOj2iAIZiaSOyQUoMx2vGr3i1EhKd35\nhukktOZA6g0GrTrQRDLLDBLcgrHOjwW1xrjbGsyf5UGxvFeV0mUSF8mDm15LBJas\ngdcPIECEJ95XmqcSpVT0UKhAbNb7+yTy3a57pDkBj7I6RLuHXz047aq1cBU1l3HN\nTHoaBF0JAgMBAAECggEAAMC129NI5MRTc96nfJroe2jA3qxI0/HtHP8e8mlnbjsu\nXD7CFvzpYFkXceQxRI33i8sasmv+Scb/kxNUhLrC5T2WKoIGX+WWji5b83QNj5ck\nBiC3m73LI1C3eesbRW+ZxOJNRQK/uejXeiD9oanbSuwYCA0wZFTHWVhD22l5PkLJ\nTLKu9CA4dFkYZSI2cHEXCGyM6huGahi89ktU2HfAZ7GhiRTsJKERPCzx4Jk+uxmg\nyH5ar1/LVnEc+R/L0yNnLPI9fp2KEQ8h0iqlw/bdH1fUknXHr4uajawS4P7ViR3X\nKaxLCKQwaE5O/4PNEFxN0Buz4PWfZ73Vv/bapOXCoQKBgQDateKzGUu75/aZ3c2B\nuUBY2b/mN7ERNWyEjhX7ItrESBTiu4BVYgq/alJTA0wsR5E2OC/gc4pQLInNP4Ay\nbiTeqwiEnV4jS05kjF52BPJB4TG+uhnR46Rf/6dgUj/YYMIL5J0Lr38/yrE5NeQ6\nQ6aZOJGxsaeYjReCp1AnmuYwaQKBgQC659DFMRjEq3WqjTAnkCQFH3Rz6JtuZMtr\n1DjHyEDqDYR/kNitUeDEEVewsNJD67aLetn8XM9RaO/gqCV4YQqnbe5HMa6P4ePv\nzET+Rpge2WlMf44J1xsdHvO+J4Rrbysx1Un1eBl4i5YHpX9FKVDan4E8TpjIT4Df\nmyUk42MzoQKBgB/bYnwH8TobnZXn8uk0XKUUgpk7/3SsPXRJZfZAq3DvtusXuKe3\nMi2ThQ5GarAAdKxbHs4oxjrLYf8dgsTVulUcwI7ghTfK3k5TC+dQ7SCfdql7Xgtu\nhyDckjq7gEU6QsmMsTtkgrp+AbZ9nRLHi9rBnKcvY2QbGROU314FeAYRAoGBAJGZ\nNmP2vDGw08fZlrKrMbQf7crBYBueP20vdFAFarQpdZceUfyqdOqoC+SjyhiJDboY\nKKnT7tifY4Zh1laxWehV1bH2POLu+G58dR6UBbq6aLHkB9UYkZGc5Am0pQ5AGqkG\nW0fyl/z02Bn6zWsmJUs5yCYfoBsi++S06jmTPVshAoGBAMexNUrjpv1CkrgAJN6E\nPPqB4sUNMhT/c9vNecSe//u1TYx5rR1iICIx8j/ksuIoqaGXYEjncpKRDV97gqx6\ndXUaYenIXq6wsNGU2mWQqr1xqghYAIaX2Ig3hxfrVc8eYlMgry3enXPmyY4Y7/q3\nhTeW1gXj7LeFLUB9EAVd/JEQ\n-----END PRIVATE KEY-----\n",
+  "client_email": "web-shadow-node@silent-revolution-ai-nexus.iam.gserviceaccount.com",
+  "client_id": "115454187653557610965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/web-shadow-node%40silent-revolution-ai-nexus.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
