@@ -1,0 +1,21 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build', 
+      '-t', 'gcr.io/nexus-core-455709/nexus-engine', 
+      '.'
+    ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [
+      'run', 'deploy', 'nexus-engine',
+      '--image', 'gcr.io/nexus-core-455709/nexus-engine',
+      '--memory', '2Gi',                # 🔥 Always 2GB RAM
+      '--cpu', '1',                     # 🔥 1 vCPU (upgrade later if needed)
+      '--platform', 'managed',
+      '--region', 'us-central1',
+      '--allow-unauthenticated',         # 🔐 (we can tighten later)
+      '--timeout', '600s'                # ⏳ 10 minute timeout (Gemma needs room)
+    ]
+images:
+  - 'gcr.io/nexus-core-455709/nexus-engine'
+timeout: 1200s                          # ⏳ Overall build timeout 20 minutes
